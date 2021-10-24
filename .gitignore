@@ -1,6 +1,12 @@
 Debug/
 
-.sln
-.vcxproj
-.user
-.filters
+*.sln
+*.vcxproj
+*.user
+*.filters
+*.suo
+*.db
+*.ipch
+*.db-shm
+*.db-wal
+*.opendb
