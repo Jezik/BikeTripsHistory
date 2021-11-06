@@ -7,6 +7,9 @@
 class Trip
 {
 public:
+    Trip()
+    {}
+
     Trip(const std::string& name, const Date& date, double timeLength, double kilometersLength, double maxSpeed, double averageSpeed);
 
     friend std::ostream& operator<<(std::ostream& s, const Trip& trip);
