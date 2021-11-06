@@ -1,20 +1,50 @@
-// BikeTripsHistory.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <sstream>
+
+#include "Trip.h"
+#include "Date.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::string name;
+    std::cout << "Input name: ";
+    std::cin >> name;
+    std::cin.ignore(10000, '\n');
+
+    std::string timeString;
+    std::cout << "Input date: ";
+    std::cin >> timeString;
+    std::cin.ignore(10000, '\n');
+    int day, month, year;
+    std::stringstream sstream{timeString};
+    sstream >> day;
+    sstream.ignore(1);
+    sstream >> month;
+    sstream.ignore(1);
+    sstream >> year;
+
+    double time;
+    std::cout << "Input time: ";
+    std::cin >> time;
+    std::cin.ignore(10000, '\n');
+
+    double kilometers;
+    std::cout << "Input kilometers: ";
+    std::cin >> kilometers;
+    std::cin.ignore(10000, '\n');
+
+    double maxSpeed;
+    std::cout << "Input Max speed: ";
+    std::cin >> maxSpeed;
+    std::cin.ignore(10000, '\n');
+
+    double averageSpeed;
+    std::cout << "Input average speed: ";
+    std::cin >> averageSpeed;
+    std::cin.ignore(10000, '\n');
+
+    Trip trip{name, {day, month, year}, time, kilometers, maxSpeed, averageSpeed};
+
+    std::cout << "Your trip:\n";
+    std::cout << trip;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
