@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "Trip.h"
-#include "Date.h"
-#include "InputHandler.h"
+#include "headers/Trip.h"
+#include "headers/Date.h"
+#include "headers/InputHandler.h"
 
 int main()
 {
